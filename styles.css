@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.small-txt {
+    margin: 20px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #434343;
+    appearance: none;   
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+} 
+
+input[type="checkbox"]:checked {
+    background-color: #03989e;
+}
+
+input[type="checkbox"]::before {
+     content: '';
+     position: absolute;
+     width: 16px;
+     height: 16px;
+     background-color: #fefefe;
+     border-radius: 50%;
+     top: 2px;
+     left: 2px;
+     transition: 0.7s ease;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+.dark-mode {
+    background-color: #252525;
+    color: #fefefe;
+
+}
+
+.dark-mode #imagenes{
+
+    border-radius: 200px;
+    
+}
+
+
+
+.dark-mode .contacto{
+
+    background-color: #252525;
+}
+
+.dark-mode .contacto :hover{
+
+color: #00191a;
+}
+
+
+h1{
+
+    font-size: 25px;
+}
+  
+h2{
+  
+    font-size: 16px;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00191a;
+    
+}
+
+.logo {
+    max-width: 10rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li:hover {
+    background-color: #555;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+li .menu-item :hover,
+li .menu-item a .active,
+a .btn :hover {
+    background: #ececec;
+    transition: backgroud-color 0,3s;
+}
+
+.nav-list li a :hover{
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+#boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00191a;
+    color: #fbfbfb;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 18px;
+    margin-top: 30px;
+    margin-left: 145px;   
+}
+
+#boton:hover{
+
+    background-color: #03989e;
+    color: #fbfbfb;
+}
+
+.container{
+
+    display: flex;
+    margin-top: 60px;
+}
+
+.sobremi-texto{
+  
+    text-align: justify;
+    justify-content: center;
+    padding: 80px;
+    margin: 0 30px;
+  
+}
+  
+.sobremi-texto h1{
+  
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.experiencia{
+  
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.experiencia h1{
+
+    text-align: center;
+    padding: 40;
+    margin-bottom: 30px;
+       
+}
+
+.habilidades{
+
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+  }
+
+.habilidades h1{
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.contacto{
+
+    text-align: center;
+    background-color: #252525;
+    color: #fefefe;
+    border-radius: 10px;
+    height: 130px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 30px;
+    
+}
+ 
+.contacto iconos{
+
+    display: flex;
+    justify-content:center;
+    height: 100px;
+    
+}
+
+.contacto .fa-brands {
+
+    color: #fbfbfb;
+    font-size: 40px;
+    margin: 30px;
+}
+
+.contacto .fa-regular{
+
+    color: #fbfbfb;
+    font-size: 40px;
+    margin: 30px;
+}
+ 
+
+.contacto :hover{
+
+    color: #00191a;
+
+}   
+
+footer{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 90px;
+    background-color: #00191a;
+    color:  #fafafa;
+    margin: 0;
+    padding: 0;
+
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: #fefefe;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+
+    .container{
+
+        display: block;
+        margin-top: 60px;
+        justify-content: center;
+       
+       }
+   
+   .container #imagenes {
+   
+           min-width: 50px;
+           max-width: 400px;
+           width: 100%;   
+   }
+   
+   .sobremi-texto{
+       text-align: justify;
+       margin: 5px;
+       padding: 5px;
+       
+   }
+       
+   .sobremi-texto h1{
+       
+           margin-top: 40px;
+   }
+       
+   .sobremi-texto #boton{
+       
+       margin-bottom: 30px;  
+       background-color: #00191a;
+       
+   }
+       
+   .experiencia h1{
+       
+        margin-top: 40px;
+   }
+       
+   }
+}
